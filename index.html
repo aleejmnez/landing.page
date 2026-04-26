@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> <!-- Codification for proper character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- metadata for responsive design -->
+    <title>EcoMedellin - Explora la belleza natural</title> <!-- Title of the page that appears in the browser -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- link to the style file -->
+</head>
+
+<body>
+    <header>
+        <div class="logo"> <!-- Container for the logo and title -->
+            <h2>EcoMedellin</h2>
+        </div>
+
+        <nav> <!-- Navigation menu -->
+            <ul> <!-- Unordered list for the navigation links -->
+                <li><a href="#parques">Parques</a></li>
+                <!-- the functions of the # is to link to the corresponding section -->
+                <li><a href="#jardines">Jardines</a></li>
+                <li><a href="#normas">Normas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- Main content of the page -->
+
+        <section class="Hero"> <!-- Hero section with a background image and introductory text -->
+            <div class="Hero-content"> <!-- Container for the content of the hero section -->
+                <h1>Explora la belleza natural de Medellín</h1>
+                <p>Descubre los mejores parques y jardines de la ciudad</p>
+            </div>
+        </section>
+
+        <section id="parques" class="info-section"> <!-- Section for parks with an id for linking -->
+            <div class="container"> <!-- Container for the content of the parks section -->
+                <div class="text-content">
+                    <h3>Parque Arví</h3>
+                    <p>Si lo que buscas es una tarde con un poco más de aventura, el Parque Arví es el lugar a donde
+                        debes ir... (aquí va el texto descriptivo)</p>
+                </div>
+
+                <div class="details"> <!-- Container for the details of the park -->
+                    <p><strong>📅 Horarios:</strong> Abierto de lunes a domingo de 8:00 a.m. a 6:00 p.m.</p>
+                    <p><strong>📍 Ubicación:</strong> Vía a Piedras Blancas, Medellín.</p>
+                </div>
+
+
+                <div class="map-container"> <!-- Container for the Google Map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="250"
+                        style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="image-gallery"> <!-- Container for the image gallery of the park -->
+                    <img src="assets/images/arvi-principal.jpg" alt="Entrada Parque Arví">
+
+
+                    <div class="sub-images"> <!-- Container for the sub-images of the park -->
+                        <img src="assets/images/arvi-1.jpg" alt="Niños en el parque">
+                        <img src="assets/images/arvi-2.jpg" alt="Sendero de madera">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="jardines" class="info-section"> <!-- Section for gardens with an id for linking -->
+            <div class="container">
+
+                <div class="text-content">
+                    <h3>Jardín Botánico</h3>
+                    <p>Tenemos que empezar por uno de los espacios naturales más grandes de Medellín. El Jardín Botánico
+                        reúne varios ambientes naturales y los mezcla de manera atractiva con actividades educativas,
+                        restaurantes, espacios para investigar la variedad de especies...</p>
+
+                    <div class="details">
+                        <p><strong>📅 Horarios:</strong> Abierto de martes a domingo de 9:00 a.m. a 4:00 p.m.</p>
+                        <p><strong>📍 Ubicación:</strong> Calle 73 # 51d - 14, Medellín.</p>
+
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9123456789!2d-75.5645!3d6.2705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTYnMjUuOCJOIDc1wrAzMyc1Mi4yIlc!5e0!3m2!1ses!2sco!4v1234567890"
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-gallery">
+                    <img src="assets/images/jardin-orquideorama.jpg" alt="Orquideorama del Jardín Botánico">
+                    <div class="sub-images">
+                        <img src="assets/images/jardin-1.jpg" alt="Arquitectura moderna en el jardín">
+                        <img src="assets/images/jardin-2.jpg" alt="Senderos naturales">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="normas" class="ecology-rules"> <!-- Section for ecology rules with an id for linking -->
+            <h2>Normas de Ecología</h2>
+            <p class="intro-text">En Medellín, nos encontramos con un gran número de puntos de ecología...</p>
+
+            <div class="rules-grid"> <!-- Container for the grid of ecology rules -->
+                <article class="rule-card"> <!-- Card for each ecology rule -->
+                    <span class="icon">🌸</span>
+                    <h4>Respetar la flora y fauna</h4>
+                    <p>Evitar tocar, recolectar o dañar plantas y animales en su hábitat natural.</p>
+                </article>
+
+                <article class="rule-card"> <!-- Card for each ecology rule -->
+                    <span class="icon">🗑️</span> <!-- Icon for the rule -->
+                    <h4>No arrojar basura</h4>
+                    <p>Utilizar los contenedores adecuados y mantener los espacios limpios.</p>
+                </article>
+
+                <article class="rule-card"> <!-- Card for each ecology rule -->
+                    <span class="icon">🚶‍♂️</span> <!-- Icon for the rule -->
+                    <h4>Seguir los senderos establecidos</h4>
+                    <p>Evitar salir de los caminos para proteger la vegetación y el suelo.</p>
+                </article>
+
+                <article class="rule-card"> <!-- Card for each ecology rule -->
+                    <span class="icon">📵</span> <!-- Icon for the rule -->
+                    <h4>Evitar ruidos fuertes</h4>
+                    <p>Respetar la tranquilidad del entorno para no perturbar a la fauna.</p>
+                </article>
+
+                <article class="rule-card"> <!-- Card for each ecology rule -->
+                    <span class="icon">🚭</span> <!-- Icon for the rule -->
+                    <h4>No fumar</h4>
+                    <p>El humo puede afectar la calidad del aire y la salud de los visitantes.</p>
+                </article>
+
+                <article class="rule-card"> <!-- Card for each ecology rule -->
+                    <span class="icon">🐾</span> <!-- Icon for the rule -->
+                    <h4>Respetar a los animales domésticos</h4>
+                    <p>Si se permiten mascotas, mantenerlas con correa y recoger sus desechos.</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+    <footer> <!-- Footer section with contact information and copyright notice -->
+        <p>&copy; 2026 EcoMedellin. Todos los derechos reservados.</p> <!-- Copyright notice -->
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
