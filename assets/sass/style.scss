@@ -33,6 +33,24 @@ header {
     width: 100%;
     z-index: 10;
 
+    .boton-menu {
+    display: none; // Oculto por defecto en pantallas grandes
+    background-color: $verde-hoja; // Usamos tu variable para mantener armonía
+    color: $blanco;
+    padding: 5px 15px;
+    font-size: 1.8rem;
+    border: none; // Quitamos el borde feo por defecto de los botones
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($verde-hoja, 15%); // Función SASS para oscurecer el color
+    }
+}
+
+
+
     .logo h2 {
         color: $blanco; // Para que el texto del logo sea blanco y contraste con el fondo del header
         font-size: 1.5rem; // Para que el título del logo no sea tan grande se usa rem en lugar de px por la responsividad
@@ -59,6 +77,7 @@ header {
         }
     }
 }
+
 
 .hero {
     height: 100vh; // Ocupa el 100% de la altura de la pantalla
@@ -214,3 +233,50 @@ footer {
         opacity: 0.8; // Un toque sutil de transparencia
     }
 }
+
+/* --- MEDIA QUERIES --- */
+
+/* 1. MÓVILES (Celulares pequeños y medianos) */
+@media (max-width: 575.98px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column; // Logo arriba y menú abajo
+        gap: 10px;
+        position: relative; // Para que no tape el texto en pantallas pequeñas
+        background-color: $verde-oscuro;
+    }
+
+    .hero {
+        height: 70vh; // Reducimos la altura para que no ocupe toda la pantalla del cel
+        h1 { font-size: 1.8rem; }
+    }
+
+    .info-section .container {
+        grid-template-columns: 1fr; // ¡MAGIA! Pasamos de 2 columnas a 1 sola
+        gap: 20px;
+    }
+
+    .ecology-rules {
+        padding: 40px 10px; // Reducimos padding lateral para ganar espacio
+        
+        .rules-grid {
+            display: flex; // Cambiamos de Grid a Flex para mejor control en móvil
+            flex-direction: column; 
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .rule-card {
+            width: 90%; // Forzamos a que la card ocupe el 90% del ancho del cel
+            max-width: 320px; // Evita que se vea gigante en pantallas pequeñas
+            margin: 0 auto; // La centra perfectamente
+            padding: 20px; // Reducimos un poco el padding interno
+            border-radius: 30px; // Mantenemos el estilo redondeado pero acorde al tamaño
+        }
+    }
+}
+
+
+
+

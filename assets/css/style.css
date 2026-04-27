@@ -26,6 +26,20 @@ header {
   width: 100%;
   z-index: 10;
 }
+header .boton-menu {
+  display: none;
+  background-color: #8fbc8f;
+  color: #ffffff;
+  padding: 5px 15px;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+header .boton-menu:hover {
+  background-color: rgb(95.2597765363, 159.2402234637, 95.2597765363);
+}
 header .logo h2 {
   color: #ffffff;
   font-size: 1.5rem;
@@ -172,6 +186,45 @@ footer p {
   font-size: 0.9rem;
   letter-spacing: 1px;
   opacity: 0.8;
+}
+
+/* --- MEDIA QUERIES --- */
+/* 1. MÓVILES (Celulares pequeños y medianos) */
+@media (max-width: 575.98px) {
+  header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    background-color: #1b3022;
+  }
+  .hero {
+    height: 70vh;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .info-section .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .ecology-rules {
+    padding: 40px 10px;
+  }
+  .ecology-rules .rules-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .ecology-rules .rule-card {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
