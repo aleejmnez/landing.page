@@ -34,20 +34,20 @@ header {
     z-index: 10;
 
     .boton-menu {
-    display: none; // Oculto por defecto en pantallas grandes
-    background-color: $verde-hoja; // Usamos tu variable para mantener armonía
-    color: $blanco;
-    padding: 5px 15px;
-    font-size: 1.8rem;
-    border: none; // Quitamos el borde feo por defecto de los botones
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+        display: none; // Oculto por defecto en pantallas grandes
+        background-color: $verde-hoja; // Usamos tu variable para mantener armonía
+        color: $blanco;
+        padding: 5px 15px;
+        font-size: 1.8rem;
+        border: none; // Quitamos el borde feo por defecto de los botones
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
 
-    &:hover {
-        background-color: darken($verde-hoja, 15%); // Función SASS para oscurecer el color
+        &:hover {
+            background-color: darken($verde-hoja, 15%); // Función SASS para oscurecer el color
+        }
     }
-}
 
 
 
@@ -110,9 +110,9 @@ header {
 
 // Para el contenedor del mapa, se adapta al ancho de la columna y se asegura de que el iframe también se ajuste correctamente
 .map-container {
-    width: 100%;  // Para que el contenedor del mapa ocupe todo el ancho de la columna
+    width: 100%; // Para que el contenedor del mapa ocupe todo el ancho de la columna
     max-width: 100%; // Para evitar que el contenedor del mapa se desborde en pantallas pequeñas
-    
+
     iframe {
         width: 100%; // Para que el iframe del mapa ocupe todo el ancho del contenedor
         border-radius: 15px; // Para darle bordes redondeados al mapa, similar a las imágenes de la galería
@@ -122,10 +122,11 @@ header {
 // Estilos para la sección de información, incluyendo el diseño de la galería de imágenes y el texto
 .info-section {
     padding: 60px 0; // Espacio generoso arriba y abajo para separar visualmente esta sección de otras partes de la página
-    
-    .container { // Para el contenedor que envuelve el texto y la galería de imágenes
+
+    .container {
+        // Para el contenedor que envuelve el texto y la galería de imágenes
         display: grid; // Para usar un diseño de cuadrícula
-        grid-template-columns: 1fr 1fr;  // Para crear dos columnas iguales, una para el texto y otra para la galería de imágenes
+        grid-template-columns: 1fr 1fr; // Para crear dos columnas iguales, una para el texto y otra para la galería de imágenes
         gap: 40px; // Para agregar espacio entre las columnas
         max-width: 1200px; // Para limitar el ancho del contenido y evitar que se extienda demasiado en pantallas grandes
         margin: 0 auto; // Para centrar el contenedor dentro de la sección
@@ -134,55 +135,65 @@ header {
     }
 
     // Estilos para el contenido de texto dentro de la sección de información, incluyendo el título, el párrafo y el mapa
-    .text-content { // Para el contenedor del texto dentro de la sección de información
+    .text-content {
+        // Para el contenedor del texto dentro de la sección de información
         display: flex; // Para usar un diseño flexible
         flex-direction: column; // Para organizar el contenido del texto en una columna, con el título, el párrafo y el mapa uno debajo del otro
         gap: 20px; // Para agregar espacio entre el título, el párrafo y el mapa
 
-        h3 { // Para el título dentro del contenido de texto
+        h3 {
+            // Para el título dentro del contenido de texto
             font-size: 2rem; // Para que el título sea grande se usa rem en lugar de px por la responsividad
             color: $verde-oscuro; // Para que el título tenga el mismo color verde oscuro que el texto general de la página, creando coherencia visual
         }
     }
 
-    .image-gallery { // Para el contenedor de la galería de imágenes dentro de la sección de información
+    .image-gallery {
+        // Para el contenedor de la galería de imágenes dentro de la sección de información
         display: grid; // Para usar un diseño de cuadrícula para la galería de imágenes
         grid-template-columns: 1fr 1fr; // Para crear dos columnas iguales para las imágenes, lo que permite que la imagen principal ocupe el doble de espacio que las imágenes secundarias
         gap: 10px; // Para agregar espacio entre las imágenes de la galería, evitando que estén demasiado pegadas entre sí
 
-        img { // Para las imágenes dentro de la galería de imágenes
+        img {
+            // Para las imágenes dentro de la galería de imágenes
             width: 100%; // Para que las imágenes ocupen todo el ancho de su contenedor, asegurando que se ajusten correctamente dentro de la cuadrícula
             border-radius: 8px; // Para darle bordes redondeados a las imágenes, similar al diseño de las tarjetas de normas
             object-fit: cover; // Para asegurarse de que las imágenes se recorten correctamente y mantengan su proporción al ocupar el espacio asignado en la cuadrícula, evitando distorsiones.
         }
 
-        & > img:first-child { // Para la primera imagen dentro de la galería de imágenes, que es la imagen principal
+        &>img:first-child {
+            // Para la primera imagen dentro de la galería de imágenes, que es la imagen principal
             grid-column: span 2; // Para que la primera imagen ocupe ambas columnas, haciéndola el doble de ancha que las imágenes secundarias
             height: 350px; // Para darle una altura específica a la imagen principal, asegurando que se destaque visualmente en la galería y mantenga una proporción atractiva con las imágenes secundarias
         }
 
-        .sub-images { // Para el contenedor de las imágenes secundarias dentro de la galería de imágenes
+        .sub-images {
+            // Para el contenedor de las imágenes secundarias dentro de la galería de imágenes
             display: contents; // Para que las imágenes secundarias se coloquen directamente en la cuadrícula sin crear un nuevo contenedor, permitiendo que se distribuyan correctamente en las columnas de la cuadrícula y mantengan el diseño deseado.
         }
-    }   
+    }
 }
 
 
-.ecology-rules { // Para la sección de normas ecológicas, se centra el texto y se diseña un grid para las tarjetas de normas
+.ecology-rules {
+    // Para la sección de normas ecológicas, se centra el texto y se diseña un grid para las tarjetas de normas
     text-align: center; // Para centrar el texto del título y la introducción de esta sección, creando un diseño más equilibrado y atractivo visualmente
     padding: 80px 20px; // Para agregar un espacio generoso arriba y abajo de esta sección, separándola visualmente de otras partes de la página y dándole un respiro al diseño
 
-    h2 { // Para el título de la sección de normas ecológicas
+    h2 {
+        // Para el título de la sección de normas ecológicas
         margin-bottom: 10px; // Para separar el título de la introducción, evitando que estén demasiado pegados entre sí
         font-size: 2.2rem; // Para que el título de esta sección sea grande se usa rem en lugar de px por la responsividad, asegurando que se destaque como un encabezado importante dentro del diseño de la página
     }
 
-    .intro-text { // Para el texto de introducción de la sección de normas ecológicas, se limita el ancho y se centra para mejorar la legibilidad
+    .intro-text {
+        // Para el texto de introducción de la sección de normas ecológicas, se limita el ancho y se centra para mejorar la legibilidad
         max-width: 700px; // Para limitar el ancho del texto de introducción, evitando que se extienda demasiado en pantallas grandes y mejorando la legibilidad al mantener líneas de texto más cortas
         margin: 0 auto 40px; // Para centrar el texto de introducción dentro de la sección y agregar un espacio debajo de este texto para separar visualmente la introducción de las tarjetas de normas
     }
 
-    .rules-grid { // Para el contenedor que envuelve las tarjetas de normas, se utiliza un diseño de cuadrícula para organizar las tarjetas en filas y columnas, creando un diseño más estructurado y visualmente atractivo
+    .rules-grid {
+        // Para el contenedor que envuelve las tarjetas de normas, se utiliza un diseño de cuadrícula para organizar las tarjetas en filas y columnas, creando un diseño más estructurado y visualmente atractivo
         display: grid; // Para usar un diseño de cuadrícula para las tarjetas de normas
         grid-template-columns: repeat(3, 1fr); // Para crear tres columnas iguales para las tarjetas de normas, lo que permite que cada tarjeta ocupe un espacio igual dentro de la cuadrícula y se mantenga un diseño equilibrado
         gap: 20px; // Para agregar espacio entre las tarjetas de normas
@@ -190,30 +201,35 @@ header {
         margin: 0 auto; // Para centrar el contenedor de las tarjetas de normas dentro de la sección, asegurando que el diseño se vea equilibrado y profesional en pantallas grandes.
     }
 
-    .rule-card { // Para las tarjetas de normas
+    .rule-card {
+        // Para las tarjetas de normas
         background-color: $verde-hoja; //fondo verde
         padding: 30px 20px; //espacio entre las tarjetas y el contenido
         border-radius: 50px; // Bordes muy redondeados como en el objetivo
         color: $verde-oscuro; // Para que el texto de las tarjetas de normas tenga el mismo color verde oscuro que el texto general de la página, creando coherencia visual
         transition: transform 0.3s ease; // Para agregar una transición suave al efecto de hover en las tarjetas de normas
 
-        &:hover { // Para el efecto al pasar el mouse sobre las tarjetas de normas, se agrega una pequeña animación de elevación para hacer que la tarjeta se destaque visualmente y se sienta más interactiva
+        &:hover {
+            // Para el efecto al pasar el mouse sobre las tarjetas de normas, se agrega una pequeña animación de elevación para hacer que la tarjeta se destaque visualmente y se sienta más interactiva
             transform: translateY(-5px); // Pequeña animación al pasar el mouse
         }
 
-        .icon { //styles of icon of rule card
+        .icon {
+            //styles of icon of rule card
             font-size: 2rem; //tamaño del icono en responsive
             display: block; //para que el icono se muestre en un bloque
             margin-bottom: 10px; //espacio entre el icono y el título de la tarjeta de normas
         }
 
-        h4 { //styles of title of rule card
+        h4 {
+            //styles of title of rule card
             margin-bottom: 8px; //espacio entre el título de la tarjeta de normas y el párrafo
             text-transform: uppercase; // Para que el título de la tarjeta de normas esté en mayúsculas, dándole un estilo más destacado y profesional
             font-size: 0.9rem; // Para que el título de la tarjeta de normas no sea tan grande se usa rem en lugar de px por la responsividad, asegurando que se vea bien en diferentes tamaños de pantalla
         }
 
-        p { //styles of paragraph of rule card
+        p {
+            //styles of paragraph of rule card
             font-size: 0.85rem; //tamaño del texto del párrafo en responsive
             line-height: 1.4; // Para mejorar la legibilidad del texto del párrafo dentro de las tarjetas de normas, se aumenta el espacio entre líneas, evitando que el texto se vea demasiado compacto y facilitando la lectura, especialmente en dispositivos móviles donde el espacio es limitado.
         }
@@ -226,7 +242,7 @@ footer {
     text-align: center; // Centramos el copyright
     padding: 40px 20px; // Espacio generoso arriba y abajo
     margin-top: 60px; // Separación de la última sección de normas
-    
+
     p {
         font-size: 0.9rem; // Para que el texto del copyright no sea tan grande se usa rem en lugar de px por la responsividad
         letter-spacing: 1px; // Un poco de espacio entre letras para estilo moderno
@@ -239,44 +255,59 @@ footer {
 /* 1. MÓVILES (Celulares pequeños y medianos) */
 @media (max-width: 575.98px) {
     header {
-        padding: 15px 20px;
-        flex-direction: column; // Logo arriba y menú abajo
-        gap: 10px;
-        position: relative; // Para que no tape el texto en pantallas pequeñas
-        background-color: $verde-oscuro;
+        flex-direction: row; // Cambia esto de column a row para que el botón quede al lado del logo
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .hero {
-        height: 70vh; // Reducimos la altura para que no ocupe toda la pantalla del cel
-        h1 { font-size: 1.8rem; }
+    .boton-menu {
+        display: block; // ¡Aquí es donde finalmente se hace visible!
     }
 
-    .info-section .container {
-        grid-template-columns: 1fr; // ¡MAGIA! Pasamos de 2 columnas a 1 sola
-        gap: 20px;
-    }
+    nav.links {
+        display: none; // El menú se oculta para esperar al clic del botón
 
-    .ecology-rules {
-        padding: 40px 10px; // Reducimos padding lateral para ganar espacio
-        
-        .rules-grid {
-            display: flex; // Cambiamos de Grid a Flex para mejor control en móvil
-            flex-direction: column; 
-            align-items: center;
-            width: 100%;
-            gap: 20px;
-        }
-
-        .rule-card {
-            width: 90%; // Forzamos a que la card ocupe el 90% del ancho del cel
-            max-width: 320px; // Evita que se vea gigante en pantallas pequeñas
-            margin: 0 auto; // La centra perfectamente
-            padding: 20px; // Reducimos un poco el padding interno
-            border-radius: 30px; // Mantenemos el estilo redondeado pero acorde al tamaño
+        &.active {
+            display: flex; // Se muestra cuando JavaScript añade la clase 'active'
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: $verde-oscuro;
+            padding: 20px;
+            border-radius: 10px;
         }
     }
 }
 
+.hero {
+    height: 70vh; // Reducimos la altura para que no ocupe toda la pantalla del cel
 
+    h1 {
+        font-size: 1.8rem;
+    }
+}
 
+.info-section .container {
+    grid-template-columns: 1fr; // ¡MAGIA! Pasamos de 2 columnas a 1 sola
+    gap: 20px;
+}
 
+.ecology-rules {
+    padding: 40px 10px; // Reducimos padding lateral para ganar espacio
+
+    .rules-grid {
+        display: flex; // Cambiamos de Grid a Flex para mejor control en móvil
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .rule-card {
+        width: 90%; // Forzamos a que la card ocupe el 90% del ancho del cel
+        max-width: 320px; // Evita que se vea gigante en pantallas pequeñas
+        margin: 0 auto; // La centra perfectamente
+        padding: 20px; // Reducimos un poco el padding interno
+        border-radius: 30px; // Mantenemos el estilo redondeado pero acorde al tamaño
+    }
+}

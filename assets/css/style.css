@@ -192,39 +192,54 @@ footer p {
 /* 1. MÓVILES (Celulares pequeños y medianos) */
 @media (max-width: 575.98px) {
   header {
-    padding: 15px 20px;
-    flex-direction: column;
-    gap: 10px;
-    position: relative;
-    background-color: #1b3022;
-  }
-  .hero {
-    height: 70vh;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .info-section .container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .ecology-rules {
-    padding: 40px 10px;
-  }
-  .ecology-rules .rules-grid {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    gap: 20px;
   }
-  .ecology-rules .rule-card {
-    width: 90%;
-    max-width: 320px;
-    margin: 0 auto;
+  .boton-menu {
+    display: block;
+  }
+  nav.links {
+    display: none;
+  }
+  nav.links.active {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #1b3022;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 10px;
   }
+}
+.hero {
+  height: 70vh;
+}
+.hero h1 {
+  font-size: 1.8rem;
+}
+
+.info-section .container {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.ecology-rules {
+  padding: 40px 10px;
+}
+.ecology-rules .rules-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.ecology-rules .rule-card {
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
