@@ -1,0 +1,216 @@
+/* Colores principales del diseño */
+$verde-oscuro: #1b3022; // Para el texto de EcoMedellín
+$verde-hoja: #8fbc8f; // Para las tarjetas de normas
+$beige-fondo: #ece3d4; // El color de fondo de la página
+$blanco: #ffffff;
+
+/* Fuentes */
+$fuente-principal: 'Arial', sans-serif; // Para el texto general de la página
+
+/* styles general */
+
+* {
+    margin: 0; // Para eliminar el margen predeterminado de los elementos
+    padding: 0; // Para eliminar el relleno predeterminado de los elementos
+    box-sizing: border-box; // Para que el padding y el border se incluyan en el tamaño total del elemento
+}
+
+body {
+    font-family: $fuente-principal; // Para que toda la página use la fuente principal definida
+    background-color: $beige-fondo; // Para que el fondo de la página sea beige claro como en el diseño
+    line-height: 1.6; // Para que el texto no esté tan pegado
+    color: $verde-oscuro;
+}
+
+/* styles of header */
+header {
+    background-color: $verde-oscuro; // O el color que desees o transparente si quieres que se vea la imagen del Hero
+    display: flex;
+    justify-content: space-between; // Logo a la izquierda, menú a la derecha
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute; // Para que flote sobre la imagen del Hero
+    width: 100%;
+    z-index: 10;
+
+    .logo h2 {
+        color: $blanco; // Para que el texto del logo sea blanco y contraste con el fondo del header
+        font-size: 1.5rem; // Para que el título del logo no sea tan grande se usa rem en lugar de px por la responsividad
+    }
+
+    nav {
+        ul {
+            list-style: none; // Para quitar los puntos de la lista
+            display: flex; // Para que los enlaces del menú estén en línea
+            gap: 20px; // Espacio entre botones
+
+            li a {
+                // Estilos para los enlaces del menú
+                color: $blanco; // Para que el texto del menú sea blanco y contraste con el fondo 
+                text-decoration: none; // Para quitar el subrayado de los enlaces
+                font-weight: bold; // Para que el texto del menú se vea más destacado
+                font-size: 0.9rem; // Para que no sean tan grandes se usa rem en lugar de px por la responsividad
+
+                &:hover {
+                    // Efecto al pasar el mouse sobre los enlaces del menú
+                    text-decoration: underline; // Efecto al pasar el mouse se coloca la línea debajo del texto
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    height: 100vh; // Ocupa el 100% de la altura de la pantalla
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/background.jpg'); // Para colocar la imagen de fondo con un filtro oscuro para que el texto se vea mejor
+    background-size: cover; // Para que la imagen de fondo cubra todo el espacio del hero
+    background-position: center; // Para que la imagen de fondo esté centrada
+    display: flex; // Para centrar el contenido del hero
+    justify-content: center; // Para centrar el contenido del hero horizontalmente
+    align-items: center; // Para centrar el contenido del hero verticalmente
+    text-align: center; // Para que el texto del hero esté centrado
+    color: $blanco; // Para que el texto del hero sea blanco y contraste con la imagen de fondo
+
+    .hero-content {
+        // Para el contenido del hero
+        max-width: 800px; // Para que el contenido del hero no sea tan ancho y se vea mejor en pantallas grandes
+        padding: 20px; // Para que el contenido del hero no esté tan pegado a los bordes
+
+        h1 {
+            // Estilos para el título del hero
+            font-size: 3rem; // Para que el título del hero sea grande se usa rem en lugar de px por la responsividad
+            margin-bottom: 20px; // Para separar el título del hero del párrafo
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Para agregar una sombra al texto del hero y que se vea mejor sobre la imagen de fondo
+        }
+
+        p {
+            font-size: 1.2rem; // Para que el párrafo del hero sea un poco más grande se usa rem en lugar de px por la responsividad
+        }
+    }
+}
+
+// Para el contenedor del mapa, se adapta al ancho de la columna y se asegura de que el iframe también se ajuste correctamente
+.map-container {
+    width: 100%;  // Para que el contenedor del mapa ocupe todo el ancho de la columna
+    max-width: 100%; // Para evitar que el contenedor del mapa se desborde en pantallas pequeñas
+    
+    iframe {
+        width: 100%; // Para que el iframe del mapa ocupe todo el ancho del contenedor
+        border-radius: 15px; // Para darle bordes redondeados al mapa, similar a las imágenes de la galería
+    }
+}
+
+// Estilos para la sección de información, incluyendo el diseño de la galería de imágenes y el texto
+.info-section {
+    padding: 60px 0; // Espacio generoso arriba y abajo para separar visualmente esta sección de otras partes de la página
+    
+    .container { // Para el contenedor que envuelve el texto y la galería de imágenes
+        display: grid; // Para usar un diseño de cuadrícula
+        grid-template-columns: 1fr 1fr;  // Para crear dos columnas iguales, una para el texto y otra para la galería de imágenes
+        gap: 40px; // Para agregar espacio entre las columnas
+        max-width: 1200px; // Para limitar el ancho del contenido y evitar que se extienda demasiado en pantallas grandes
+        margin: 0 auto; // Para centrar el contenedor dentro de la sección
+        align-items: start; // Para alinear el contenido de ambas columnas al inicio, asegurando que el texto y la galería estén alineados en la parte superior
+        padding: 0 20px; // Para agregar un poco de espacio a los lados del contenedor en pantallas pequeñas
+    }
+
+    // Estilos para el contenido de texto dentro de la sección de información, incluyendo el título, el párrafo y el mapa
+    .text-content { // Para el contenedor del texto dentro de la sección de información
+        display: flex; // Para usar un diseño flexible
+        flex-direction: column; // Para organizar el contenido del texto en una columna, con el título, el párrafo y el mapa uno debajo del otro
+        gap: 20px; // Para agregar espacio entre el título, el párrafo y el mapa
+
+        h3 { // Para el título dentro del contenido de texto
+            font-size: 2rem; // Para que el título sea grande se usa rem en lugar de px por la responsividad
+            color: $verde-oscuro; // Para que el título tenga el mismo color verde oscuro que el texto general de la página, creando coherencia visual
+        }
+    }
+
+    .image-gallery { // Para el contenedor de la galería de imágenes dentro de la sección de información
+        display: grid; // Para usar un diseño de cuadrícula para la galería de imágenes
+        grid-template-columns: 1fr 1fr; // Para crear dos columnas iguales para las imágenes, lo que permite que la imagen principal ocupe el doble de espacio que las imágenes secundarias
+        gap: 10px; // Para agregar espacio entre las imágenes de la galería, evitando que estén demasiado pegadas entre sí
+
+        img { // Para las imágenes dentro de la galería de imágenes
+            width: 100%; // Para que las imágenes ocupen todo el ancho de su contenedor, asegurando que se ajusten correctamente dentro de la cuadrícula
+            border-radius: 8px; // Para darle bordes redondeados a las imágenes, similar al diseño de las tarjetas de normas
+            object-fit: cover; // Para asegurarse de que las imágenes se recorten correctamente y mantengan su proporción al ocupar el espacio asignado en la cuadrícula, evitando distorsiones.
+        }
+
+        & > img:first-child { // Para la primera imagen dentro de la galería de imágenes, que es la imagen principal
+            grid-column: span 2; // Para que la primera imagen ocupe ambas columnas, haciéndola el doble de ancha que las imágenes secundarias
+            height: 350px; // Para darle una altura específica a la imagen principal, asegurando que se destaque visualmente en la galería y mantenga una proporción atractiva con las imágenes secundarias
+        }
+
+        .sub-images { // Para el contenedor de las imágenes secundarias dentro de la galería de imágenes
+            display: contents; // Para que las imágenes secundarias se coloquen directamente en la cuadrícula sin crear un nuevo contenedor, permitiendo que se distribuyan correctamente en las columnas de la cuadrícula y mantengan el diseño deseado.
+        }
+    }   
+}
+
+
+.ecology-rules { // Para la sección de normas ecológicas, se centra el texto y se diseña un grid para las tarjetas de normas
+    text-align: center; // Para centrar el texto del título y la introducción de esta sección, creando un diseño más equilibrado y atractivo visualmente
+    padding: 80px 20px; // Para agregar un espacio generoso arriba y abajo de esta sección, separándola visualmente de otras partes de la página y dándole un respiro al diseño
+
+    h2 { // Para el título de la sección de normas ecológicas
+        margin-bottom: 10px; // Para separar el título de la introducción, evitando que estén demasiado pegados entre sí
+        font-size: 2.2rem; // Para que el título de esta sección sea grande se usa rem en lugar de px por la responsividad, asegurando que se destaque como un encabezado importante dentro del diseño de la página
+    }
+
+    .intro-text { // Para el texto de introducción de la sección de normas ecológicas, se limita el ancho y se centra para mejorar la legibilidad
+        max-width: 700px; // Para limitar el ancho del texto de introducción, evitando que se extienda demasiado en pantallas grandes y mejorando la legibilidad al mantener líneas de texto más cortas
+        margin: 0 auto 40px; // Para centrar el texto de introducción dentro de la sección y agregar un espacio debajo de este texto para separar visualmente la introducción de las tarjetas de normas
+    }
+
+    .rules-grid { // Para el contenedor que envuelve las tarjetas de normas, se utiliza un diseño de cuadrícula para organizar las tarjetas en filas y columnas, creando un diseño más estructurado y visualmente atractivo
+        display: grid; // Para usar un diseño de cuadrícula para las tarjetas de normas
+        grid-template-columns: repeat(3, 1fr); // Para crear tres columnas iguales para las tarjetas de normas, lo que permite que cada tarjeta ocupe un espacio igual dentro de la cuadrícula y se mantenga un diseño equilibrado
+        gap: 20px; // Para agregar espacio entre las tarjetas de normas
+        max-width: 1100px; // Para limitar el ancho del contenedor de las tarjetas de normas
+        margin: 0 auto; // Para centrar el contenedor de las tarjetas de normas dentro de la sección, asegurando que el diseño se vea equilibrado y profesional en pantallas grandes.
+    }
+
+    .rule-card { // Para las tarjetas de normas
+        background-color: $verde-hoja; //fondo verde
+        padding: 30px 20px; //espacio entre las tarjetas y el contenido
+        border-radius: 50px; // Bordes muy redondeados como en el objetivo
+        color: $verde-oscuro; // Para que el texto de las tarjetas de normas tenga el mismo color verde oscuro que el texto general de la página, creando coherencia visual
+        transition: transform 0.3s ease; // Para agregar una transición suave al efecto de hover en las tarjetas de normas
+
+        &:hover { // Para el efecto al pasar el mouse sobre las tarjetas de normas, se agrega una pequeña animación de elevación para hacer que la tarjeta se destaque visualmente y se sienta más interactiva
+            transform: translateY(-5px); // Pequeña animación al pasar el mouse
+        }
+
+        .icon { //styles of icon of rule card
+            font-size: 2rem; //tamaño del icono en responsive
+            display: block; //para que el icono se muestre en un bloque
+            margin-bottom: 10px; //espacio entre el icono y el título de la tarjeta de normas
+        }
+
+        h4 { //styles of title of rule card
+            margin-bottom: 8px; //espacio entre el título de la tarjeta de normas y el párrafo
+            text-transform: uppercase; // Para que el título de la tarjeta de normas esté en mayúsculas, dándole un estilo más destacado y profesional
+            font-size: 0.9rem; // Para que el título de la tarjeta de normas no sea tan grande se usa rem en lugar de px por la responsividad, asegurando que se vea bien en diferentes tamaños de pantalla
+        }
+
+        p { //styles of paragraph of rule card
+            font-size: 0.85rem; //tamaño del texto del párrafo en responsive
+            line-height: 1.4; // Para mejorar la legibilidad del texto del párrafo dentro de las tarjetas de normas, se aumenta el espacio entre líneas, evitando que el texto se vea demasiado compacto y facilitando la lectura, especialmente en dispositivos móviles donde el espacio es limitado.
+        }
+    }
+}
+
+footer {
+    background-color: $verde-oscuro; // Fondo oscuro para dar cierre visual
+    color: $blanco; // Texto en blanco para legibilidad
+    text-align: center; // Centramos el copyright
+    padding: 40px 20px; // Espacio generoso arriba y abajo
+    margin-top: 60px; // Separación de la última sección de normas
+    
+    p {
+        font-size: 0.9rem; // Para que el texto del copyright no sea tan grande se usa rem en lugar de px por la responsividad
+        letter-spacing: 1px; // Un poco de espacio entre letras para estilo moderno
+        opacity: 0.8; // Un toque sutil de transparencia
+    }
+}
